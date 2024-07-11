@@ -1,5 +1,5 @@
 
-  /* filter: drop-shadow(0 0 2em #646cffaa); */
+  
 
   .post {
     width: 400px;
@@ -83,3 +83,9 @@
       width: 50%;
       color: #979797;
   }
+
+
+.fa-thumbs-up:hover, .fa-thumbs-down:hover{
+  filter: drop-shadow(0 0 2em #646cffaa);
+
+}
