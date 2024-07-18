@@ -122,7 +122,12 @@ button:hover {
 }
 .newproduct{
   width: 200px;
-  height: 420px;
+  height: 470px;
   background-color: #cbd1d3;
   margin-top: 10px;
+  border: 1px solid;
+}
+
+.product-name{
+  font-size: 14px;
 }

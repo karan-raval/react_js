@@ -55,10 +55,12 @@ const handleUpdate = ()=>{
  setDis(false)
  setObj({
    id :v4(),
-  title : "",
-  price : "",
-  img : "",
-  des : ""
+   name : "",
+    brand : "",
+    imgurl : "",
+    dprice : "",
+    oprice:"",
+    catagory:""
 })
 }
 

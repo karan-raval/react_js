@@ -10,7 +10,7 @@ const Data = (props) => {
                 return (
                      <div className='newproduct' key={el.id}>
                         <img className='productimg' src={el.imgurl} alt=""/>
-                        <h3>{el.name}  -  ₹{el.dprice}</h3>
+                        <h4 className='product-name'>{el.name}  -  ₹{el.dprice}</h4>
                         <strike>₹{el.oprice}</strike>
                         <p>Brand :- {el.brand}</p>
                         <span>catagory -{el.catagory}</span>
