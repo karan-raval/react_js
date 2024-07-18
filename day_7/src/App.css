@@ -1,0 +1,128 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #2c3e50;
+}
+.main{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-container {
+  background-color: #34495e;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 400px;
+  height: 550px;
+  margin: 5%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  animation: slideIn 0.8s ease-in-out, borderLight 2s infinite alternate;
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes borderLight {
+  from {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  to {
+      box-shadow: 0 0 20px rgba(122, 206, 167, 0.856);
+  }
+}
+body .Products{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.form-container h2 {
+  color: #ecf0f1;
+  margin-bottom: 20px;
+}
+
+ .signup-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+
+
+/* COMMON CSS */
+
+.signup-link a {
+  color: #9294ee;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+  color: #2980b9;
+}
+
+.signup-link p {
+  color: #7f8c8d;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+
+/* SIGNUP PAGE CSS */
+
+button{
+  background-color: #e74c3c;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+  background-color: #cbd1d3;
+  color: #333;
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form input[type="password"]:focus {
+  background-color: #9eb1b1;
+}
+.productimg{
+  width: 200px;
+  height: 180px;
+}
+.newproduct{
+  width: 200px;
+  height: 420px;
+  background-color: #cbd1d3;
+  margin-top: 10px;
+}
