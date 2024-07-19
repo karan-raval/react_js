@@ -23,6 +23,11 @@ function App() {
         text: "Fill The Above details!",
       });
     } else {
+      Swal.fire({
+        icon: "success",
+        title: "Congratsss...",
+        text: "SignUp Succesfully...",
+      });
       setArr([...arr, obj]);
     }
   };
@@ -63,7 +68,7 @@ function App() {
       {state == "Login" ? (
         <div className="center">
           <h1>Login</h1>
-          <form method="post">
+          <form>
             <div className="txt_field">
               <input
                 type="email"
@@ -86,7 +91,7 @@ function App() {
             <input type="submit" onClick={handleLoginClick} value="Login" />
             <div className="signup_link">
               Not a member?{" "}
-              <a href="#" onClick={() => setState("Signup")}>
+              <a onClick={() => setState("Signup")}>
                 Signup
               </a>
             </div>
@@ -103,7 +108,7 @@ function App() {
                   <input type="text" placeholder="Enter your name"  />
                 </div>
                 <div className="input-box">
-                  <span className="details">Username</span>
+                  <span className="details">Username<sup>*</sup></span>
                   <input
                     type="text"
                     placeholder="Enter your username"
@@ -112,7 +117,7 @@ function App() {
                   />
                 </div>
                 <div className="input-box">
-                  <span className="details">Email</span>
+                  <span className="details">Email<sup>*</sup></span>
                   <input
                     type="text"
                     placeholder="Enter your email"
@@ -125,7 +130,7 @@ function App() {
                   <input type="text" placeholder="Enter your number"  />
                 </div>
                 <div className="input-box">
-                  <span className="details">Password</span>
+                  <span className="details">Password <sup>*</sup></span>
                   <input
                     type="text"
                     placeholder="Enter your password"

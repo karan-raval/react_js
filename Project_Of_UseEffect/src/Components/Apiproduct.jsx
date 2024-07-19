@@ -9,11 +9,11 @@ function Apiproduct({ arr }) {
             {
             arr.map((el) => {
               return (
-                <div className="col-12 col-md-4 col-lg-3 mb-5">
-                  <a className="product-item" href="#">
+                <div className="col-12 col-md-4 col-lg-3 mb-5 my">
+                  <a className="product-item">
                     <img
                       src={el.imageURL}
-                      className="img-fluid product-thumbnail"
+                      className="myimg product-thumbnail"
                     />
                     <h3 className="product-title">{el.product}</h3>
                     <strong className="product-price">${el.price}</strong>
