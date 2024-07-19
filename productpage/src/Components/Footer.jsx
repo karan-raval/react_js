@@ -12,7 +12,6 @@ const Footer = () => {
         <div class="row">
             <div class="col-lg-8">
                 <div class="subscription-form">
-                    <h3 class="d-flex align-items-center"><span class="me-1"/><img src="file:///C:/Users/karan/Downloads/furni-1.0.0/furni-1.0.0/images/envelope-outline.svg" alt="Image" class="img-fluid"/><span>Subscribe to Newsletter</span></h3>
 
                     <form class="row g-3">
                         <div class="col-auto">
