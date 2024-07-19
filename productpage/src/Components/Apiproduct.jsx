@@ -19,7 +19,7 @@ function Apiproduct({ arr }) {
                     <strong className="product-price">${el.price}</strong>
 
                     <span className="icon-cross">
-                      <img src="file:///C:/Users/karan/Downloads/furni-1.0.0/furni-1.0.0/images/cross.svg" className="img-fluid" />
+                      <img src="https://themewagon.github.io/furni/images/cross.svg" className="img-fluid" />
                     </span>
                   </a>
                 </div>
