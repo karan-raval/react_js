@@ -6,7 +6,7 @@ const Footer = () => {
     <div class="container relative">
 
         <div class="sofa-img">
-            <img src="./src/images/sofa.png" alt="Image" class="img-fluid"/>
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Hx9M_OHXh2gIKJek5LkN4wHaHa&pid=Api&P=0&h=180" alt="Image" class="img-fluid"/>
         </div>
 
         <div class="row">

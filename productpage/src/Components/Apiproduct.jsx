@@ -29,7 +29,7 @@ function Apiproduct({ arr }) {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
 

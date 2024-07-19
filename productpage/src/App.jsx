@@ -41,8 +41,8 @@ const handleclick=()=>{
 					</ul>
 	
 					<ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><p className="nav-link" ><img src="./src/images/user.svg" onClick={handleclick}/></p></li>
-						<li><a className="nav-link" href="cart.html"><img src="./src/images/cart.svg"/></a></li>
+						<li><p className="nav-link" ><img src="https://themewagon.github.io/furni/images/user.svg" onClick={handleclick}/></p></li>
+						<li><a className="nav-link" href="cart.html"><img src="https://themewagon.github.io/furni/images/cart.svg"/></a></li>
 					</ul>
 				</div>
 			</div>
