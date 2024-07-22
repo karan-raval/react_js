@@ -1,14 +1,18 @@
 import React from 'react'
 import { useState } from 'react'
 import Data from './Data'
-import { v4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
+import Swal from 'sweetalert2'
+
+// or via CommonJS
+// const Swal = require('sweetalert2')
 
 const Adminform = () => {
   const [dis,setDis] = useState(false)
   const [id,setId] = useState("")
   const [data,setData] = useState([])
   const [obj,setObj] = useState({
-    id: v4(),
+    id: uuidv4(),
     name : "",
     brand : "",
     imgurl : "",
@@ -22,10 +26,20 @@ const handleChange = (e)=>{
     setObj({...obj, [e.target.name] : e.target.value})
 }
 const handleClick = ()=>{
+  if(obj.name=="" && obj.brand==""&& obj.imgurl==""&&obj.dprice==""&&obj.oprice==""&&obj.catagory=="" )
+  {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Fill All The Details!",
+    });
+  }
+  else{
+    setData([...data,obj])
+  }
 
-setData([...data,obj])
 setObj({
-  id: v4(),
+  id: uuidv4(),
     name : "",
     brand : "",
     imgurl : "",

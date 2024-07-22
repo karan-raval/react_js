@@ -14,8 +14,10 @@ const Data = (props) => {
                         <strike>₹{el.oprice}</strike>
                         <p>Brand :- {el.brand}</p>
                         <span>catagory -{el.catagory}</span>
-                        <button onClick={()=>props.del(el.id)}>Delete</button>
-                        <button onClick={()=>props.edit(el.id)}>Edit</button>
+                        <br />
+                        <br />
+                        <button className='bbtn' onClick={()=>props.del(el.id)}>Delete</button>
+                        <button className='bbtn' onClick={()=>props.edit(el.id)}>Edit</button>
                      </div>
                 )
             })
