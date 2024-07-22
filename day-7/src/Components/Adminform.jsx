@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Data from './Data'
 import { v4 as uuidv4 } from 'uuid';
 import Swal from 'sweetalert2'
+import Loder from './Loder';
 
 // or via CommonJS
 // const Swal = require('sweetalert2')
@@ -22,11 +23,10 @@ const Adminform = () => {
 })
 
 const handleChange = (e)=>{
-  
     setObj({...obj, [e.target.name] : e.target.value})
 }
 const handleClick = ()=>{
-  if(obj.name=="" && obj.brand==""&& obj.imgurl==""&&obj.dprice==""&&obj.oprice==""&&obj.catagory=="" )
+  if(obj.name=="")
   {
     Swal.fire({
       icon: "error",
@@ -34,7 +34,37 @@ const handleClick = ()=>{
       text: "Fill All The Details!",
     });
   }
-  else{
+  else if (obj.brand==""){
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Fill All The Details!",
+    });
+  }else if ( obj.imgurl==""){
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Fill All The Details!",
+    });
+  }else if (obj.dprice==""){
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Fill All The Details!",
+    })
+  }else if (obj.oprice==""){
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Fill All The Details!",
+    })
+  }else if (obj.catagory==""){
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Fill All The Details!",
+    })
+  }else{
     setData([...data,obj])
   }
 
@@ -105,7 +135,7 @@ const handleDelete = (dl)=>{
         <button onClick={handleUpdate} style={{ display : dis ? "inline-block" : "none"}}>Update</button>
     </div>
 </div>
-    {data== null ? <h1>Loading.........</h1> : <Data del={handleDelete} arr={data} edit={handleEdit} />}
+    {data.length==0 ? <Loder/> : <Data del={handleDelete} arr={data} edit={handleEdit} />}
     </div>
     </>
   )
