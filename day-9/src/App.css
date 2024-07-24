@@ -80,16 +80,24 @@ body{
 }
 
 .submit{
-	float: right;
+	/* float: center; */
 	border: none;
+	margin-left: 35%;
 	color: white;
 	width: 110px;
 	height: 35px;
 	background: #ff6600;
 	text-transform: uppercase;
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .ss{
   background: #2d3e3f
+}
+
+.eye{
+	/* border: 1px solid red; */
+	position: absolute;
+	right: 10%;
+	top: 54.5%;
 }

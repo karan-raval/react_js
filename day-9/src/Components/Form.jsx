@@ -1,124 +1,109 @@
 import React from "react";
+import { useState } from "react";
 
 export const Form = () => {
+  const [obj, setObj] = useState({
+    firstname:"",
+    email: "",
+    password: "",
+  });
+  const [arr, setarr] = useState([]);
+  const [viewPass, setviewPass] = useState(false);
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setObj({ ...obj, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setarr([...arr, obj]);
+    setObj({
+      email: "",
+      password: "",
+    });
+  };
+  console.log(arr);
   return (
     <>
       <div className="container">
-        <form method="post" autocomplete="on">
+        <form onSubmit={handleSubmit}>
           <div className="box">
-            <label for="firstName" className="fl fontLabel">
-              {" "}
-              First Name:{" "}
+            <label htmlFor="firstName" className="fl fontLabel">
+            First Name:
             </label>
             <div className="new iconBox">
-              <i className="fa fa-user" aria-hidden="true"></i>
+              <i className="fa fa-user" ></i>
             </div>
             <div className="fr">
-              <input
-                type="text"
-                name="firstName"
-                placeholder="First Name"
-                className="textBox"
-                required
-              />
+              <input type="text"  placeholder="First Name" className="textBox" value={obj.firstname} name='firstname'  onChange={handleChange} required />
             </div>
             <div className="clr"></div>
           </div>
           <div className="box">
-            <label for="secondName" className="fl fontLabel">
-              {" "}
-              Seconed Name:{" "}
+            <label htmlFor="secondName" className="fl fontLabel">
+              Seconed Name:
             </label>
             <div className="fl iconBox">
-              <i className="fa fa-user" aria-hidden="true"></i>
+              <i className="fa fa-user"></i>
             </div>
             <div className="fr">
-              <input
-                type="text"
-                required
-                name="secondName"
-                placeholder="Last Name"
-                className="textBox"
-              />
+              <input type="text" name="secondName" placeholder="Last Name" className="textBox" required />
             </div>
             <div className="clr"></div>
           </div>
           <div className="box">
-            <label for="phone" className="fl fontLabel">
-              {" "}
-              Phone No.:{" "}
+            <label htmlFor="phone" className="fl fontLabel">
+              Phone No.:
             </label>
             <div className="fl iconBox">
               <i className="fa fa-phone-square" aria-hidden="true"></i>
             </div>
             <div className="fr">
-              <input
-                type="text"
-                required
-                name="phoneNo"
-                maxlength="10"
-                placeholder="Phone No."
-                className="textBox"
-              />
+              <input type="text" maxLength="10" placeholder="Phone No." className="textBox" required />
             </div>
             <div className="clr"></div>
           </div>
-
           <div className="box">
-            <label for="email" className="fl fontLabel">
-              {" "}
-              Email ID:{" "}
+            <label htmlFor="email" className="fl fontLabel">
+              Email ID:
             </label>
             <div className="fl iconBox">
               <i className="fa fa-envelope" aria-hidden="true"></i>
             </div>
             <div className="fr">
-              <input
-                type="email"
-                required
-                name="email"
-                placeholder="Email Id"
-                className="textBox"
-              />
+              <input type="email" placeholder="Email Id" className="textBox" value={obj.email} name='email' onChange={handleChange} required/>
             </div>
             <div className="clr"></div>
           </div>
-
           <div className="box">
-            <label for="password" className="fl fontLabel">
-              {" "}
-              Password{" "}
+            <label htmlFor="password" className="fl fontLabel">
+              Password
             </label>
             <div className="fl iconBox">
               <i className="fa fa-key" aria-hidden="true"></i>
             </div>
             <div className="fr">
-              <input
-                type="Password"
-                required
-                name="password"
-                placeholder="Password"
-                className="textBox"
-              />
+              <input type={viewPass ?  "text" : "password"} placeholder="Password" className="textBox" name='password' value={obj.password} onChange={handleChange} required />
             </div>
+            {viewPass==false ? <span onClick={()=>setviewPass(true)} className="material-symbols-outlined eye">
+          visibility
+            </span> : <span onClick={()=>setviewPass(false)} className="material-symbols-outlined eye">
+            visibility_off
+            </span>}
             <div className="clr"></div>
           </div>
           <div className="box radio">
-            <label for="gender" className="fl fontLabel">
-              {" "}
-              Gender:{" "}
+            <label htmlFor="gender" className="fl fontLabel">
+              Gender:
             </label>
             <input type="radio" name="Gender" value="Male" required /> Male
             &nbsp; &nbsp; &nbsp; &nbsp;
             <input type="radio" name="Gender" value="Female" required /> Female
           </div>
           <div className="box terms">
-            <input type="checkbox" name="Terms" required /> &nbsp; I accept the
-            terms and conditions
+            <input type="checkbox" name="Terms" required /> &nbsp; I accept the terms and conditions
           </div>
-
-          <div className="box ss" >
-            <input type="Submit" name="Submit" className="submit" value="SUBMIT" />
+          <div className="box ss">
+            <input type="Submit" name="Submit" className="submit" value="SUBMIT"/>
           </div>
         </form>
       </div>
