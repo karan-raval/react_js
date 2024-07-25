@@ -3,21 +3,21 @@ import React from 'react'
 const Signinform = () => {
   return (
     <>
-     <div class="container">
-      <div class="card">
-        <div class="card_title">
+     <div className="container">
+      <div className="card">
+        <div className="card_title">
           <h1>Create Account</h1>
-          <span>Already have an account? <a href="login">Sign In</a></span>
+          <span>Already have an account? <a >Sign In</a></span>
         </div>
-        <div class="form">
-        <form action="/register" method="post">
+        <div className="form">
+        <form>
           <input type="text" name="username" id="username" placeholder="UserName" />
           <input type="email" name="email" placeholder="Email" id="email" />
           <input type="password" name="password" placeholder="Password" id="password" />
-          <button>Sign Up</button>
           </form>
+          <button className='btn-hover color-9'>Sign Up</button>
         </div>
-        <div class="card_terms">
+        <div className="card_terms">
             <input type="checkbox" name="" id="terms"/> <span>I have read and agree to the <a href="">Terms of Service</a></span>
         </div>
       </div>
