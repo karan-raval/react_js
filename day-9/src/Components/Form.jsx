@@ -51,7 +51,7 @@ export const Form = () => {
               <i className="fa fa-user"></i>
             </div>
             <div className="fr">
-              <input type="text"  value={obj.lastname} name='lastname'  onChange={handleChange} placeholder="Last Name" className="textBox" required />
+              <input type="text"  value={obj.lastname} name='lastname'  onChange={handleChange} placeholder="Last-Name" className="textBox" required />
             </div>
             <div className="clr"></div>
           </div>
