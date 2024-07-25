@@ -4,6 +4,8 @@ import { useState } from "react";
 export const Form = () => {
   const [obj, setObj] = useState({
     firstname:"",
+    lastname:"",
+    pnumber:"",
     email: "",
     password: "",
   });
@@ -17,6 +19,9 @@ export const Form = () => {
     e.preventDefault();
     setarr([...arr, obj]);
     setObj({
+      firstname:"",
+      lastname:"",
+    pnumber:"",
       email: "",
       password: "",
     });
@@ -46,7 +51,7 @@ export const Form = () => {
               <i className="fa fa-user"></i>
             </div>
             <div className="fr">
-              <input type="text" name="secondName" placeholder="Last Name" className="textBox" required />
+              <input type="text"  value={obj.lastname} name='lastname'  onChange={handleChange} placeholder="Last Name" className="textBox" required />
             </div>
             <div className="clr"></div>
           </div>
@@ -55,10 +60,10 @@ export const Form = () => {
               Phone No.:
             </label>
             <div className="fl iconBox">
-              <i className="fa fa-phone-square" aria-hidden="true"></i>
+              <i className="fa fa-phone-square" ></i>
             </div>
             <div className="fr">
-              <input type="text" maxLength="10" placeholder="Phone No." className="textBox" required />
+              <input type="text"  placeholder="Phone No." value={obj.pnumber} name='pnumber'  onChange={handleChange} className="textBox" required />
             </div>
             <div className="clr"></div>
           </div>
@@ -103,7 +108,7 @@ export const Form = () => {
             <input type="checkbox" name="Terms" required /> &nbsp; I accept the terms and conditions
           </div>
           <div className="box ss">
-            <input type="Submit" name="Submit" className="submit" value="SUBMIT"/>
+            <input type="Submit" name="Submit" className="submit" value="submit"/>
           </div>
         </form>
       </div>
