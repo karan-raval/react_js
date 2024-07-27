@@ -107,16 +107,6 @@
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 
-.pass {
-  /* position: relative; */
-  margin: 10px 0;
-  width: 80%;
-  background-color: #e2e2e2;
-  border: none;
-  outline: none;
-  padding: 12px 20px;
-  border-radius: 4px;
-}
 .eye{
   position: absolute;
   right: 38%;

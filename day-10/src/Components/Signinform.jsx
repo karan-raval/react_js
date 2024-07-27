@@ -2,8 +2,12 @@ import React from "react";
 import { useState } from "react";
 
 const Signinform = () => {
-  const [isFocused, setIsFocused] = useState(false); 
-  const [isblur, setisbliur] = useState(false); 
+  const [isFocused, setIsFocused] = useState(false);
+  const [isFocusedemail, setIsFocusedemail] = useState(false);
+  const [isFocusedname, setIsFocusedname] = useState(false);
+  const [isFocusednumber, setIsFocusednumber] = useState(false);
+  const [isFocuseduser, setIsFocuseduser] = useState(false);
+  const [isblur, setisbliur] = useState(false);
   const [obj, setObj] = useState({
     firstname: "",
     lastname: "",
@@ -28,38 +32,55 @@ const Signinform = () => {
       password: "",
     });
   };
-  const handleBlur =()=>{
-    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,22}$/; 
+  const handleBlur = () => {
+    let regex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,22}$/;
 
-    
-    // setviewPass(regex.test(obj.password))
-     console.log(viewPass)
-     setIsFocused(false)
-      if(regex.test(obj.password)){
-      // {
-        setisbliur(false);
-        // console.log("viewpass is false")
-        // setIsFocused(true);
-      }else{
-        setisbliur(true)
-      }
+    // console.log(viewPass);
+    // setIsFocused(false);
+    if (regex.test(obj.password)) {
+      setisbliur(false);
+    } else {
+      setisbliur(true);
     }
+  };
+  const handleFocususer =()=>{
+    setIsFocuseduser(true)
+    setIsFocusedname(false)
+    setIsFocusedemail(false)
+    setIsFocusednumber(false)
+    setIsFocused(false)
+  }
+  const handleFocusnumber=()=>{
+    setIsFocusednumber(true)
+    setIsFocusedname(false)
+    setIsFocusedemail(false)
+    setIsFocuseduser(false)
+    setIsFocused(false)
+  }
+  const handleFocusname=()=>{
+    setIsFocusedname(true)
+    setIsFocusednumber(false)
+    setIsFocusedemail(false)
+    setIsFocuseduser(false)
+    setIsFocused(false)
+  }
+  const handleFocusemail =()=>{
+    setIsFocusedemail(true)
+    setIsFocusednumber(false)
+    setIsFocusedname(false)
+    setIsFocuseduser(false)
+    setIsFocused(false)
+  }
+  const handleFocus = () => {
+    setIsFocusednumber(false)
+    setIsFocusedname(false)
+    setIsFocusedemail(false)
 
-   const handleFocus = ()=>{
-    
-   
-   if(isblur == false){
-     setIsFocused(true)
-     
-   }
-  //  if(viewPass==true){
-  //   setisbliur(false);
-  //   console.log("viewpass is true")
-  //  }
-    // x.style.background="red"
-    //  console.log("Focus wala"); 
-   }
-  // console.log(arr);
+    if (isblur == false) {
+      setIsFocused(true);
+    }
+  };
   return (
     <>
       <div className="container">
@@ -79,6 +100,15 @@ const Signinform = () => {
                 onChange={handleChange}
                 required
                 placeholder="Full Name"
+                onFocus={handleFocusname}
+                style= 
+                { 
+                    { 
+                        border: isFocusedname ==false ? 
+                            'none' : '1px solid red', 
+                            
+                    } 
+                }
               />
               <input
                 type="text"
@@ -87,6 +117,15 @@ const Signinform = () => {
                 onChange={handleChange}
                 required
                 placeholder="Phone Number"
+                onFocus={handleFocusnumber}
+                style= 
+                { 
+                    { 
+                        border: isFocusednumber ==false ? 
+                            'none' : '1px solid red', 
+                            
+                    } 
+                }
               />
               <input
                 type="text"
@@ -95,6 +134,15 @@ const Signinform = () => {
                 onChange={handleChange}
                 required
                 placeholder="User Name"
+                onFocus={handleFocususer}
+                style= 
+                { 
+                    { 
+                        border: isFocuseduser ==false ? 
+                            'none' : '1px solid red', 
+                            
+                    } 
+                }
               />
               <input
                 type="email"
@@ -104,6 +152,15 @@ const Signinform = () => {
                 required
                 placeholder="Email"
                 id="email"
+                onFocus={handleFocusemail}
+                style= 
+                { 
+                    { 
+                        border: isFocusedemail ==false ? 
+                            'none' : '1px solid red', 
+                            
+                    } 
+                }
               />
               <input
                 type={viewPass ? "text" : "password"}
@@ -112,10 +169,18 @@ const Signinform = () => {
                 value={obj.password}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                onFocus={handleFocus} 
+                onFocus={handleFocus}
+                style= 
+                { 
+                    { 
+                        border: isFocused ==false ? 
+                            'none' : '1px solid red', 
+                            
+                    } 
+                }
               />
-              {isFocused ==false  ? "" : <p>password include special character</p>}
-              {isblur == false  ? " " :<p>password must be 8 character</p>}
+              {/* {isFocused == false ? "" : <p>password include special character</p>} */}
+              {isblur == false ? " " : <p>Password Must Be 8 Character And Special Character Also</p>}
               <div className="eye">
                 {viewPass == false ? (
                   <span
@@ -133,7 +198,7 @@ const Signinform = () => {
                   </span>
                 )}
               </div>
-            <button className="btn-hover color-9">Sign Up</button>
+              <button className="btn-hover color-9">Sign Up</button>
             </form>
           </div>
           <div className="card_terms">
