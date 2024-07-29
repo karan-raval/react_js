@@ -8,6 +8,7 @@ const Signinform = () => {
   const [isFocusednumber, setIsFocusednumber] = useState(false);
   const [isFocuseduser, setIsFocuseduser] = useState(false);
   const [isblur, setisbliur] = useState(false);
+  const [isbluremail, setisbluremail] = useState(false);
   const [obj, setObj] = useState({
     firstname: "",
     lastname: "",
@@ -32,50 +33,62 @@ const Signinform = () => {
       password: "",
     });
   };
-  const handleBlur = () => {
-    let regex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,22}$/;
+  const handleBluremail =()=>{
+    let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-    // console.log(viewPass);
-    // setIsFocused(false);
+
+    if (regex.test(obj.email)) {
+      setisbluremail(false);
+    } else {
+      setisbluremail(true);
+    }
+  }
+  const handleBlur = () => {
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,12}$/;
+
     if (regex.test(obj.password)) {
       setisbliur(false);
     } else {
       setisbliur(true);
     }
   };
-  const handleFocususer =()=>{
-    setIsFocuseduser(true)
-    setIsFocusedname(false)
-    setIsFocusedemail(false)
-    setIsFocusednumber(false)
-    setIsFocused(false)
-  }
-  const handleFocusnumber=()=>{
-    setIsFocusednumber(true)
-    setIsFocusedname(false)
-    setIsFocusedemail(false)
-    setIsFocuseduser(false)
-    setIsFocused(false)
-  }
-  const handleFocusname=()=>{
-    setIsFocusedname(true)
-    setIsFocusednumber(false)
-    setIsFocusedemail(false)
-    setIsFocuseduser(false)
-    setIsFocused(false)
-  }
-  const handleFocusemail =()=>{
-    setIsFocusedemail(true)
-    setIsFocusednumber(false)
-    setIsFocusedname(false)
-    setIsFocuseduser(false)
-    setIsFocused(false)
-  }
+  const handleFocususer = () => {
+    setIsFocuseduser(true);
+    setIsFocusedname(false);
+    setIsFocusedemail(false);
+    setIsFocusednumber(false);
+    setIsFocused(false);
+  };
+  const handleFocusnumber = () => {
+    setIsFocusednumber(true);
+    setIsFocusedname(false);
+    setIsFocusedemail(false);
+    setIsFocuseduser(false);
+    setIsFocused(false);
+  };
+  const handleFocusname = () => {
+    setIsFocusedname(true);
+    setIsFocusednumber(false);
+    setIsFocusedemail(false);
+    setIsFocuseduser(false);
+    setIsFocused(false);
+  };
+  const handleFocusemail = () => {
+    setIsFocusedemail(true);
+    setIsFocusednumber(false);
+    setIsFocusedname(false);
+    setIsFocuseduser(false);
+    setIsFocused(false);
+
+    if (isblur == false) {
+      setIsFocusedemail(true);
+    }
+
+  };
   const handleFocus = () => {
-    setIsFocusednumber(false)
-    setIsFocusedname(false)
-    setIsFocusedemail(false)
+    setIsFocusednumber(false);
+    setIsFocusedname(false);
+    setIsFocusedemail(false);
 
     if (isblur == false) {
       setIsFocused(true);
@@ -95,92 +108,85 @@ const Signinform = () => {
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
+                className="input"
                 value={obj.firstname}
                 name="firstname"
                 onChange={handleChange}
                 required
-                placeholder="Full Name"
+                placeholder="Full Name*"
                 onFocus={handleFocusname}
-                style= 
-                { 
-                    { 
-                        border: isFocusedname ==false ? 
-                            'none' : '1px solid red', 
-                            
-                    } 
-                }
+                style={{
+                  border: isFocusedname == false ? "none" : "1px solid red",
+                }}
               />
               <input
                 type="text"
+                className="input"
                 value={obj.pnumber}
                 name="pnumber"
                 onChange={handleChange}
                 required
-                placeholder="Phone Number"
+                placeholder="Phone Number*"
                 onFocus={handleFocusnumber}
-                style= 
-                { 
-                    { 
-                        border: isFocusednumber ==false ? 
-                            'none' : '1px solid red', 
-                            
-                    } 
-                }
+                style={{
+                  border: isFocusednumber == false ? "none" : "1px solid red",
+                }}
               />
               <input
                 type="text"
                 name="lastname"
+                className="input"
                 value={obj.lastname}
                 onChange={handleChange}
                 required
-                placeholder="User Name"
+                placeholder="User Name*"
                 onFocus={handleFocususer}
-                style= 
-                { 
-                    { 
-                        border: isFocuseduser ==false ? 
-                            'none' : '1px solid red', 
-                            
-                    } 
-                }
+                style={{
+                  border: isFocuseduser == false ? "none" : "1px solid red",
+                }}
               />
               <input
                 type="email"
                 name="email"
+                className="input"
                 value={obj.email}
                 onChange={handleChange}
                 required
-                placeholder="Email"
+                placeholder="Email*"
                 id="email"
                 onFocus={handleFocusemail}
-                style= 
-                { 
-                    { 
-                        border: isFocusedemail ==false ? 
-                            'none' : '1px solid red', 
-                            
-                    } 
-                }
+                onBlur={handleBluremail}
+                style={{
+                  border: isFocusedemail == false ? "none" : "1px solid red",
+                }}
               />
-              <input
+              {isbluremail == false ? (
+                  " "
+                ) : (
+                  <p>Enter Valid Email</p>
+                )}
+                <div className="passwordbox">
+             <input
                 type={viewPass ? "text" : "password"}
                 name="password"
-                placeholder="Password"
+                required
+                className="pass"
+                placeholder="Password*"
                 value={obj.password}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 onFocus={handleFocus}
-                style= 
-                { 
-                    { 
-                        border: isFocused ==false ? 
-                            'none' : '1px solid red', 
-                            
-                    } 
-                }
+                style={{
+                  border: isFocused == false ? "none" : "1px solid red",
+                }}
               />
               {/* {isFocused == false ? "" : <p>password include special character</p>} */}
-              {isblur == false ? " " : <p>Password Must Be 8 Character And Special Character Also</p>}
+              
+              {isblur == false ? (
+                " "
+              ) : (
+                <p className="warning">Password Must Be 8 Character And Special Character Also</p>
+              )} 
               <div className="eye">
                 {viewPass == false ? (
                   <span
@@ -197,6 +203,7 @@ const Signinform = () => {
                     visibility_off
                   </span>
                 )}
+              </div>
               </div>
               <button className="btn-hover color-9">Sign Up</button>
             </form>
