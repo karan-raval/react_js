@@ -182,11 +182,7 @@ const Signinform = () => {
               />
               {/* {isFocused == false ? "" : <p>password include special character</p>} */}
               
-              {isblur == false ? (
-                " "
-              ) : (
-                <p className="warning">Password Must Be 8 Character And Special Character Also</p>
-              )} 
+              
               <div className="eye">
                 {viewPass == false ? (
                   <span
@@ -205,6 +201,11 @@ const Signinform = () => {
                 )}
               </div>
               </div>
+              {isblur == false ? (
+                " "
+              ) : (
+                <p className="warning">Password Must Be 8 Character And Special Character Also</p>
+              )} 
               <button className="btn-hover color-9">Sign Up</button>
             </form>
           </div>

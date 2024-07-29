@@ -51,7 +51,7 @@
 }
 
 .form .pass {
-  position: relative;
+  /* position: relative; */
   margin: 10px 0;
   width: 100%;
   background-color: #e2e2e2;
@@ -120,18 +120,20 @@
 }
 
 .eye{
-  position: fixed;
-  /* right: 3%; */
-  /* top: 50%; */
-  /* border: 1px solid black; */
-  /* height: auto; */
+  position: absolute;
+  right: 3%;
+  top: 30%;
   cursor: pointer;
-  transform: translate(1300%,-140%);
-  /* transform: translatex(-10%); */
   background-color: none;
 
 }
 
 .warning{
   font-size: 12px;
+}
+.passwordbox{
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  position: relative;
 }
