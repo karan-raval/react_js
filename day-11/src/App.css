@@ -1,42 +1,122 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+form {
+  margin: 0% 70%;
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+h2 {
   text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  opacity: 0.5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+input[type="email"],
+input[type="tel"],
+textarea,
+select,
+#dob {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  opacity: 0.5;
 }
 
-.card {
-  padding: 2em;
+textarea {
+  height: 100px;
+  resize: vertical;
 }
 
-.read-the-docs {
-  color: #888;
+.checkboxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.checkboxes label {
+  margin-right: 20px;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  background-color: #854d28;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.buttons button:hover {
+  background-color: #6e4225;
+}
+.hobbyinput{
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  opacity: 0.5;
+}
+.hobbybox{
+  /* border: 1px solid black; */
+  position: relative;
+}
+.plus{
+  position: absolute;
+  top: 40%;
+  right: 0;
 }
