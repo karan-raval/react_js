@@ -61,6 +61,13 @@ body {
   padding-left: 60px;
   padding-right: 50px;
 }
+.g1{
+  /* border: 1px solid black; */
+  position: absolute;
+  right: 10%;
+  top: 0%;
+  color: white
+}
 .form-v10-content .form-detail .form-left .form-group .form-row.form-row-1 {
   width: 50%;
   padding: 0 12px 0 60px;
@@ -83,7 +90,7 @@ body {
 }
 .form-v10-content .form-detail .form-right .form-group .form-row.form-row-2 {
   width: 100%;
-  padding: 0 50px 0 12px;
+  /* padding: 0 50px 0 12px; */
 }
 .form-v10-content .form-detail select,
 .form-v10-content .form-detail input {
@@ -356,6 +363,7 @@ body {
 
 .gg{
   position: relative;
+  /* top: 10%; */
 }
 .material-symbols-outlined{
   position: absolute;
@@ -442,6 +450,13 @@ body {
   color: #7d2ae8;
   font-size: 17px;
 }
+.gg1{
+  position: absolute;
+  right: 0%;
+  /* top: 0; */
+  color: #7d2ae8;
+}
+
 .forms .form-content .text{
   font-size: 14px;
   font-weight: 500;
