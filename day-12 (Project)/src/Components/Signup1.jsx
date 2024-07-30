@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Swal from 'sweetalert2'
 
 const Signup1 = () => {
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginpass, setLoginpass] = useState("");
   const [isblur, setisbliur] = useState(false);
   const [isbluremail, setisbluremail] = useState(false);
   const [state, setState] = useState("Signup");
@@ -68,6 +70,39 @@ const Signup1 = () => {
       setisbliur(false);
     } else {
       setisbliur(true);
+    }
+  };
+
+
+  const handleLoginClick = () => {
+    let data = arr1.filter((el) => {
+      return el.email == loginEmail && el.password == loginpass;
+    });
+    // console.log(data);
+    if (data.length > 0) {
+      Swal.fire({
+        title: "Login Succesfully...",
+        showClass: {
+          popup: `
+                    animate__animated
+                    animate__fadeInUp
+                    animate__faster
+                  `,
+        },
+        hideClass: {
+          popup: `
+                    animate__animated
+                    animate__fadeOutDown
+                    animate__faster
+                  `,
+        },
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Login Unsuccessfull!",
+      });
     }
   };
   console.log(arr1);
@@ -270,7 +305,7 @@ const Signup1 = () => {
             <div className="form-content">
               <div className="login-form">
                 <div className="title">Login</div>
-                <form>
+                <form onSubmit={handleLoginClick}>
                   <div className="input-boxes">
                     <div className="input-box">
                       <i className="fas fa-envelope"></i>
@@ -278,6 +313,7 @@ const Signup1 = () => {
                         type="text"
                         placeholder="Enter your email"
                         required
+                        onChange={(d) => setLoginEmail(d.target.value)}
                       />
                     </div>
                     <div className="input-box">
@@ -286,6 +322,7 @@ const Signup1 = () => {
                         type={viewPass ?  "text" : "password"}
                         placeholder="Enter your password"
                         required
+                        onChange={(d) => setLoginpass(d.target.value)}
                       />
                       {viewPass==true ?<span onClick={()=>setviewPass(false)} className="material-symbols-outlined gg1">
 visibility
@@ -298,13 +335,13 @@ visibility_off
                       <a>Forgot password?</a>
                     </div>
                     <div className="button input-box">
-                      <input type="submit" value="Sumbit" />
+                      <input type="submit" value="Sumbit"  />
                     </div>
                     <div
                       className="text sign-up-text"
                       onClick={() => setState("Login")}
                     >
-                      Don't have an account?{" "}
+                      Don't have an account?
                       <label htmlFor="flip">Sigup now</label>
                     </div>
                   </div>
