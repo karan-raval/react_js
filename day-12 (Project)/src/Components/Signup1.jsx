@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const Signup1 = () => {
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginpass, setLoginpass] = useState("");
   const [isblur, setisbliur] = useState(false);
   const [isbluremail, setisbluremail] = useState(false);
-  const [state, setState] = useState("Signup");
+  const [isblurlogin, setisbliurlogin] = useState(false);
+  const [isbluremaillogin, setisbluremaillogin] = useState(false);
+  const [state, setState] = useState("Login");
   const [arr, setArr] = useState([]);
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginpass, setLoginpass] = useState("");
+  const [arr1, setarr] = useState([]);
+  const [viewPass, setviewPass] = useState(false);
   const handleClick = () => {
     setArr([...arr, "skill"]);
   };
@@ -18,25 +22,27 @@ const Signup1 = () => {
     pnumber: "",
     email: "",
     password: "",
-    position:"",
-    company:"",
-    skill:"",
-    address:"",
-    country:"",
+    position: "",
+    company: "",
+    skill: "",
+    address: "",
+    country: "",
   });
-  const [arr1, setarr] = useState([]);
-  const [viewPass, setviewPass] = useState(false);
+ 
+  
   const handleChange = (e) => {
     let { name, value } = e.target;
     setObj({ ...obj, [name]: value });
   };
+
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
-      Swal.fire({
-        icon: "success",
-        title: "Congratsss...",
-        text: "SignUp Succesfully...",
-      });
+    Swal.fire({
+      icon: "success",
+      title: "Congratsss...",
+      text: "SignUp Succesfully...",
+    });
     setarr([...arr1, obj]);
     setObj({
       firstname: "",
@@ -44,27 +50,50 @@ const Signup1 = () => {
       pnumber: "",
       email: "",
       password: "",
-      position:"",
-      company:"",
-      skill:"",
-      country:"",
-      address:"",
+      position: "",
+      company: "",
+      skill: "",
+      country: "",
+      address: "",
     });
   };
 
-  const handleBluremail =()=>{
+  // login blur
+  const handleloginBluremail = () => {
     let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
+    if (regex.test(loginEmail)) {
+      setisbluremaillogin(false);
+    } else {
+      setisbluremaillogin(true);
+    }
+  };
+
+  const handleloginBlurpass = () => {
+    let regex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,12}$/;
+
+    if (regex.test(loginpass)) {
+      setisbliurlogin(false);
+    } else {
+      setisbliurlogin(true);
+    }
+  };
+
+  // signin blur
+  const handleBluremail = () => {
+    let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (regex.test(obj.email)) {
       setisbluremail(false);
     } else {
       setisbluremail(true);
     }
-  }
+  };
 
   const handleBlur = () => {
-    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,12}$/;
+    let regex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,12}$/;
 
     if (regex.test(obj.password)) {
       setisbliur(false);
@@ -73,8 +102,8 @@ const Signup1 = () => {
     }
   };
 
-
-  const handleLoginClick = () => {
+  const handleLoginClick = (e) => {
+    e.preventDefault();
     let data = arr1.filter((el) => {
       return el.email == loginEmail && el.password == loginpass;
     });
@@ -142,7 +171,11 @@ const Signup1 = () => {
                   </div>
                 </div>
                 <div className="form-row">
-                  <select name="position" value={obj.position} onChange={handleChange}>
+                  <select
+                    name="position"
+                    value={obj.position}
+                    onChange={handleChange}
+                  >
                     <option value="position">Position</option>
                     <option value="director">Director</option>
                     <option value="manager">Manager</option>
@@ -156,7 +189,8 @@ const Signup1 = () => {
                   <input
                     type="text"
                     name="company"
-                    value={obj.company} onChange={handleChange}
+                    value={obj.company}
+                    onChange={handleChange}
                     className="company"
                     id="company"
                     placeholder="Company"
@@ -211,7 +245,11 @@ const Signup1 = () => {
                   />
                 </div>
                 <div className="form-row">
-                  <select name="country" value={obj.country} onChange={handleChange}>
+                  <select
+                    name="country"
+                    value={obj.country}
+                    onChange={handleChange}
+                  >
                     <option value="country">Country</option>
                     <option value="Vietnam">Vietnam</option>
                     <option value="Malaysia">Malaysia</option>
@@ -225,7 +263,9 @@ const Signup1 = () => {
                   <div className="form-row form-row-2">
                     <input
                       type="text"
-                      value={obj.pnumber} name='pnumber'  onChange={handleChange}
+                      value={obj.pnumber}
+                      name="pnumber"
+                      onChange={handleChange}
                       className="phone"
                       id="phone"
                       placeholder="Phone Number"
@@ -236,50 +276,53 @@ const Signup1 = () => {
                 <div className="form-row">
                   <input
                     type="text"
-                    value={obj.email} name='email' onBlur={handleBluremail} onChange={handleChange}
-                   
+                    value={obj.email}
+                    name="email"
+                    onBlur={handleBluremail}
+                    onChange={handleChange}
                     className="input-text"
                     required
                     placeholder="Your Email"
                   />
                   {isbluremail == false ? (
-                  " "
-                ) : (
-                  <p>Enter Valid Email</p>
-                )}
+                    " "
+                  ) : (
+                    <p className="email-warinng">*Enter Valid Email</p>
+                  )}
                 </div>
                 <div className="form-row">
                   <input
-                   type={viewPass ?  "text" : "password"}
-                    name='password' value={obj.password} onChange={handleChange}
+                    type={viewPass ? "text" : "password"}
+                    name="password"
+                    value={obj.password}
+                    onChange={handleChange}
                     onBlur={handleBlur}
                     className="input-pass"
                     required
                     placeholder="Password"
                   />
-                  {viewPass==true ? <span onClick={()=>setviewPass(false)} className="g1 material-symbols-outlined eye">
-          visibility
-            </span> : <span onClick={()=>setviewPass(true)} className="g1 material-symbols-outlined eye">
-            visibility_off
-            </span>}
-            {isblur == false ? (
-                " "
-              ) : (
-                <p className="warning">Password Must Be 8 Character And Special Character Also</p>
-              )} 
-                </div>
-                <div className="form-checkbox">
-                  <label className="container">
-                    <p>
-                      I do accept the{" "}
-                      <a className="text">
-                        Terms and Conditions
-                      </a>
-                      of your site.
+                  {viewPass == true ? (
+                    <span
+                      onClick={() => setviewPass(false)}
+                      className="g1 material-symbols-outlined eye"
+                    >
+                      visibility
+                    </span>
+                  ) : (
+                    <span
+                      onClick={() => setviewPass(true)}
+                      className="g1 material-symbols-outlined eye"
+                    >
+                      visibility_off
+                    </span>
+                  )}
+                  {isblur == false ? (
+                    ""
+                  ) : (
+                    <p className="warning">
+                      *Password Must Be 8 Character And Special Character Also
                     </p>
-                    <input type="checkbox" name="checkbox" required />
-                    <span className="checkmark"></span>
-                  </label>
+                  )}
                 </div>
                 <div className="form-row-last">
                   <input
@@ -292,7 +335,8 @@ const Signup1 = () => {
                     className="text sign-up-text"
                     onClick={() => setState("Signup")}
                   >
-                    Already have an account? <label htmlFor="flip">Login now</label>
+                    Already have an account?{" "}
+                    <label htmlFor="flip">Login now</label>
                   </div>
                 </div>
               </div>
@@ -300,54 +344,102 @@ const Signup1 = () => {
           </div>
         </div>
       ) : (
-        <div className="containerr">
-          <div className="forms">
-            <div className="form-content">
-              <div className="login-form">
-                <div className="title">Login</div>
-                <form onSubmit={handleLoginClick}>
-                  <div className="input-boxes">
-                    <div className="input-box">
-                      <i className="fas fa-envelope"></i>
-                      <input
-                        type="text"
-                        placeholder="Enter your email"
-                        required
-                        onChange={(d) => setLoginEmail(d.target.value)}
-                      />
-                    </div>
-                    <div className="input-box">
-                      <i className="fas fa-lock"></i>
-                      <input
-                        type={viewPass ?  "text" : "password"}
-                        placeholder="Enter your password"
-                        required
-                        onChange={(d) => setLoginpass(d.target.value)}
-                      />
-                      {viewPass==true ?<span onClick={()=>setviewPass(false)} className="material-symbols-outlined gg1">
-visibility
-</span>:
-<span onClick={()=>setviewPass(true)} className="material-symbols-outlined gg1">
-visibility_off
-</span>}
-                    </div>
-                    <div className="text">
-                      <a>Forgot password?</a>
-                    </div>
-                    <div className="button input-box">
-                      <input type="submit" value="Sumbit"  />
-                    </div>
-                    <div
-                      className="text sign-up-text"
-                      onClick={() => setState("Login")}
-                    >
-                      Don't have an account?
-                      <label htmlFor="flip">Sigup now</label>
-                    </div>
-                  </div>
-                </form>
+        <div className="body">
+          <div className="login_form">
+            <form onSubmit={handleLoginClick}>
+              <h3>Log in with</h3>
+
+              <div className="login_option">
+                <div className="option">
+                  <a href="#">
+                    <img
+                      src="https://www.codingnepalweb.com/demos/make-simple-login-form-html-css/logos/google.png"
+                      alt="Google"
+                    />
+                    <span>Google</span>
+                  </a>
+                </div>
+
+                <div className="option">
+                  <a href="#">
+                    <img
+                      src="https://www.codingnepalweb.com/demos/make-simple-login-form-html-css/logos/apple.png"
+                      alt="Apple"
+                    />
+                    <span>Apple</span>
+                  </a>
+                </div>
               </div>
-            </div>
+
+              <p className="separator">
+                <span>or</span>
+              </p>
+
+              <div className="input_box">
+                <label >Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  onBlur={handleloginBluremail}
+                  onChange={(d) => setLoginEmail(d.target.value)}
+                  id="email"
+                  placeholder="Enter email address"
+                  required
+                />
+                {isbluremaillogin == false ? (
+                  " "
+                ) : (
+                  <p className="email-warinng">*Enter Valid Email</p>
+                )}
+              </div>
+
+              <div className="input_box gg">
+                <div className="password_title">
+                  <label for="password">Password</label>
+                </div>
+
+                <input
+                  type={viewPass ? "text" : "password"}
+                  onBlur={handleloginBlurpass}
+                  onChange={(d) => setLoginpass(d.target.value)}
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+                {viewPass == true ? (
+                  <span
+                    onClick={() => setviewPass(false)}
+                    className="material-symbols-outlined gg1"
+                  >
+                    
+                    visibility
+                  </span>
+                ) : (
+                  <span
+                    onClick={() => setviewPass(true)}
+                    className="material-symbols-outlined gg1"
+                  >
+                   
+                    visibility_off
+                  </span>
+                )}
+                {isblurlogin == false ? (
+                  ""
+                ) : (
+                  <p className="warning">
+                    
+                    *Password Must Be 8 Character And Special Character Also{" "}
+                  </p>
+                )}
+              </div>
+
+              <button type="submit">Log In</button>
+
+              <p className="sign_up" onClick={() => setState("Login")}>
+                Don't have an account? <a>Sign up</a>
+              </p>
+            </form>
           </div>
         </div>
       )}

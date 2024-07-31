@@ -375,7 +375,7 @@ body {
 }
 
 
-/* Google Font Link */
+/* Google Font Link
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 .containerr{
@@ -450,12 +450,7 @@ body {
   color: #7d2ae8;
   font-size: 17px;
 }
-.gg1{
-  position: absolute;
-  right: 0%;
-  /* top: 0; */
-  color: #7d2ae8;
-}
+
 
 .forms .form-content .text{
   font-size: 14px;
@@ -501,4 +496,4 @@ body {
   .form-content .signup-form{
     display: none;
   }
-}
+} */
