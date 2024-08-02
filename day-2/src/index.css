@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.bg1{
+  background-image:url(./Components/assets/images/bg_1.jpg)
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg2{
+  background-image:url(./Components/assets/images/bg_2.jpg)
+}
+.bg3{
+  background-image: url(./Components/assets/images/properties-1.jpg)
+}
+.bg4{
+  background-image: url(./Components/assets/images/properties-2.jpg)
+}
+.bg5{
+  background-image: url(./Components/assets/images/properties-3.jpg)
+}
+.bg6{
+  background-image: url(./Components/assets/images/properties-4.jpg)
+}
+.bg7{
+  background-image: url(./Components/assets/images/properties-5.jpg)
+}
+.bg8{
+  background-image: url(./Components/assets/images/properties-6.jpg)
+}
+.bg9{
+  background-image: url(./Components/assets/images/person_1.jpg)
+}
+.bg10{
+  background-image: url(./Components/assets/images/person_2.jpg)
+}
+.bg11{
+  background-image: url(./Components/assets/images/person_3.jpg)
+}
+.bg12{
+  background-image: url(./Components/assets/images/image_1.jpg)
+}
+.bg13{
+  background-image: url(./Components/assets/images/image_2.jpg)
+}
+.bg14{
+  background-image: url(./Components/assets/images/image_3.jpg)
+}
+.bg15{
+  background-image: url(./Components/assets/images/image_4.jpg)
 }
