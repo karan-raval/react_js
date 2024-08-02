@@ -4,65 +4,66 @@ const Footer = () => {
   
   return (
     <>
-   <footer className="ftco-footer ftco-bg-dark ftco-section">
-<div className="container">
-<div className="row mb-5">
-<div className="col-md">
-<div className="ftco-footer-widget mb-4">
-<h2 className="ftco-heading-2">Royalestate</h2>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-<ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-<li className="ftco-animate"><a href="#"><span className="icon-twitter"></span></a></li>
-<li className="ftco-animate"><a href="#"><span className="icon-facebook"></span></a></li>
-<li className="ftco-animate"><a href="#"><span className="icon-instagram"></span></a></li>
-</ul>
+  <footer id="footer" class="footer dark-background">
+
+<div class="container footer-top">
+  <div class="row gy-4">
+    <div class="col-lg-4 col-md-6 footer-about">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <span class="sitename">Presento</span>
+      </a>
+      <div class="footer-contact pt-3">
+        <p>A108 Adam Street</p>
+        <p>New York, NY 535022</p>
+        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+        <p><strong>Email:</strong> <span>info@example.com</span></p>
+      </div>
+      <div class="social-links d-flex mt-4">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 footer-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Terms of service</a></li>
+        <li><a href="#">Privacy policy</a></li>
+      </ul>
+    </div>
+
+    <div class="col-lg-2 col-md-3 footer-links">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Product Management</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Graphic Design</a></li>
+      </ul>
+    </div>
+
+    <div class="col-lg-4 col-md-12 footer-newsletter">
+      <h4>Our Newsletter</h4>
+      <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+      <form action="forms/newsletter.php" method="post" class="php-email-form">
+        <div class="newsletter-form"><input type="email" name="email"/><input type="submit" value="Subscribe"/></div>
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+      </form>
+    </div>
+
+  </div>
 </div>
-</div>
-<div className="col-md">
-<div className="ftco-footer-widget mb-4 ml-md-5">
-<h2 className="ftco-heading-2">Buy</h2>
-<ul className="list-unstyled">
-<li><a href="#" className="py-2 d-block">Home For Sale</a></li>
-<li><a href="#" className="py-2 d-block">Open Houses</a></li>
-<li><a href="#" className="py-2 d-block">New Listing</a></li>
-<li><a href="#" className="py-2 d-block">Recently Reduce</a></li>
-<li><a href="#" className="py-2 d-block">Off-Market Homes</a></li>
-</ul>
-</div>
-</div>
-<div className="col-md">
-<div className="ftco-footer-widget mb-4">
-<h2 className="ftco-heading-2">Sell</h2>
-<ul className="list-unstyled">
-<li><a href="#" className="py-2 d-block">Sell Your Home</a></li>
-<li><a href="#" className="py-2 d-block">Get A Home Valuation</a></li>
-<li><a href="#" className="py-2 d-block">Local Home Prices</a></li>
-<li><a href="#" className="py-2 d-block">Guides &amp; Rules</a></li>
-<li><a href="#" className="py-2 d-block">Others</a></li>
-</ul>
-</div>
-</div>
-<div className="col-md">
-<div className="ftco-footer-widget mb-4">
-<h2 className="ftco-heading-2">Have a Questions?</h2>
-<div className="block-23 mb-3">
-<ul>
-<li><span className="icon icon-map-marker"></span><span className="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-<li><a href="#"><span className="icon icon-phone"></span><span className="text">+2 392 3929 210</span></a></li>
-<li><a href="#"><span className="icon icon-envelope"></span><span className="text"><span className="__cf_email__" data-cfemail="523b3c343d122b3d2720363d3f333b3c7c313d3f">[email&#160;protected]</span></span></a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div className="row">
-<div className="col-md-12 text-center">
-<p>
-Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i className="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-</p>
-</div>
-</div>
-</div>
+
+
+
 </footer>
     </>
   )

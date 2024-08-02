@@ -3,43 +3,48 @@ import React from 'react'
 const Navbar = () => {
   return (
     <>
-<div className="top">
-<div className="container">
-<div className="row d-flex align-items-center">
-<div className="col">
-<p className="social d-flex">
-<a href="#"><span className="icon-facebook"></span></a>
-<a href="#"><span className="icon-twitter"></span></a>
-<a href="#"><span className="icon-google"></span></a>
-<a href="#"><span className="icon-pinterest"></span></a>
-</p>
-</div>
-<div className="col d-flex justify-content-end">
-<p className="num"><span className="icon-phone"></span> + 1700 12345 6789</p>
-</div>
-</div>
-</div>
-</div>
-<nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-<div className="container">
-<a className="navbar-brand" href="index.html">Royal<span>estate</span></a>
-<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-<span className="oi oi-menu"></span> Menu
-</button>
-<div className="collapse navbar-collapse" id="ftco-nav">
-<ul className="navbar-nav ml-auto">
-<li className="nav-item active"><a href="index.html" className="nav-link">Home</a></li>
-<li className="nav-item"><a href="property.html" className="nav-link">Property</a></li>
-<li className="nav-item"><a href="agents.html" className="nav-link">Agents</a></li>
-<li className="nav-item"><a href="about.html" className="nav-link">About</a></li>
-<li className="nav-item"><a href="blog.html" className="nav-link">Blog</a></li>
-<li className="nav-item"><a href="contact.html" className="nav-link">Contact</a></li>
-<li className="nav-item cta"><a href="contact.html" className="nav-link ml-lg-2"><span className="icon-user"></span> Sign-In</a></li>
-<li className="nav-item cta cta-colored"><a href="contact.html" className="nav-link"><span className="icon-pencil"></span> Sign-Up</a></li>
-</ul>
-</div>
-</div>
-</nav>
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Presento</h1>
+        <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br/></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+
+    </div>
+  </header>
     </>
   )
 }
