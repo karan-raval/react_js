@@ -1,8 +1,5 @@
 
 const Section1 = () => {
-
-
-   
   return (
    <>
     <main class="main">
@@ -34,7 +31,7 @@ const Section1 = () => {
     <div class="swiper init-swiper">
       
       <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""/></div>
+        <div class="swiper-slide"><img src="./Components/img/clients/client-2.png" class="img-fluid" alt=""/></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""/></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""/></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""/></div>
@@ -809,7 +806,7 @@ const Section1 = () => {
       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
         <div class="team-member">
           <div class="member-img">
-            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""/>
+            <img src='https://bootstrapmade.com/demo/templates/Presento/assets/img/team/team-1.jpg' class="img-fluid" alt=""/>
             <div class="social">
               <a href=""><i class="bi bi-twitter-x"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -827,7 +824,7 @@ const Section1 = () => {
       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
         <div class="team-member">
           <div class="member-img">
-            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""/>
+            <img src="https://bootstrapmade.com/demo/templates/Presento/assets/img/team/team-2.jpg" class="img-fluid" alt=""/>
             <div class="social">
               <a href=""><i class="bi bi-twitter-x"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -845,7 +842,7 @@ const Section1 = () => {
       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
         <div class="team-member">
           <div class="member-img">
-            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""/>
+            <img src="https://bootstrapmade.com/demo/templates/Presento/assets/img/team/team-3.jpg" class="img-fluid" alt=""/>
             <div class="social">
               <a href=""><i class="bi bi-twitter-x"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -863,7 +860,7 @@ const Section1 = () => {
       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
         <div class="team-member">
           <div class="member-img">
-            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""/>
+            <img src="https://bootstrapmade.com/demo/templates/Presento/assets/img/team/team-4.jpg" class="img-fluid" alt=""/>
             <div class="social">
               <a href=""><i class="bi bi-twitter-x"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
