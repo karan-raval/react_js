@@ -1,7 +1,6 @@
 import React from "react";
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Carousel from 'react-bootstrap/Carousel';
+// import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
 const Navbar = () => {
   return (
@@ -26,14 +25,31 @@ const Navbar = () => {
 </div>
 </div>
 </nav>
-<OwlCarousel className='owl-theme' loop margin={10} nav>
-    <div class='item'>
-        <h4>1</h4>
-    </div>
-    <div class='item'>
-        <h4>2</h4>
-    </div>
-</OwlCarousel>;
+<Carousel fade>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://preview.colorlib.com/theme/christian/images/bg_1.jpg"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://preview.colorlib.com/theme/christian/images/bg_2.jpg"
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+     
+    </Carousel>
     </>
   );
 };
