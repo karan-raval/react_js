@@ -20,8 +20,8 @@ const Section3 = () => {
 <span>by pastor:</span>
 <h3>Jerry Simon</h3>
 <p className>
-<a href="https://vimeo.com/45830194" className="btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
-<a href="#" className="btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
+<a href="https://vimeo.com/45830194" className="textdecoration-none textdecoration-none btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
+<a className="textdecoration-none btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
 </p>
 </div>
 </div>
@@ -42,13 +42,13 @@ const Section3 = () => {
 <span>by pastor:</span>
 <h3>Jerry Simon</h3>
 <p className>
-<a href="https://vimeo.com/45830194" className="btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
-<a href="#" className="btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
+<a href="https://vimeo.com/45830194" className="textdecoration-none btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
+<a href="#" className="textdecoration-none btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
 </p>
 </div>
 </div>
 <div className="text pt-3 text-center">
-<h2 className="mb-0"><a href="sermon.html">Developing Spiritual Mentality</a></h2>
+<h2 className="mb-0"><a className='textdecoration-none'>Developing Spiritual Mentality</a></h2>
 <div className="meta">
 <p className="mb-0">
 <span>July 01, 2019</span>
@@ -64,13 +64,13 @@ const Section3 = () => {
 <span>by pastor:</span>
 <h3>Jerry Simon</h3>
 <p className>
-<a href="https://vimeo.com/45830194" className="btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
-<a href="#" className="btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
+<a  className="textdecoration-none btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
+<a href="#" className="textdecoration-none btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
 </p>
 </div>
 </div>
 <div className="text pt-3 text-center">
-<h2 className="mb-0"><a href="sermon.html">Let the Bible Motivate You</a></h2>
+<h2 className="mb-0"><a className='textdecoration-none'>Let the Bible Motivate You</a></h2>
 <div className="meta">
 <p className="mb-0">
 <span>July 01, 2019</span>
@@ -86,13 +86,13 @@ const Section3 = () => {
 <span>by pastor:</span>
 <h3>Jerry Simon</h3>
 <p className>
-<a href="https://vimeo.com/45830194" className="btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
-<a href="#" className="btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
+<a href="https://vimeo.com/45830194" className=" textdecoration-none btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
+<a href="#" className=" textdecoration-none btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
 </p>
 </div>
 </div>
 <div className="text pt-3 text-center">
-<h2 className="mb-0"><a href="sermon.html">Let the Sunset Inspire You</a></h2>
+<h2 className="mb-0"><a className='textdecoration-none'>Let the Sunset Inspire You</a></h2>
 <div className="meta">
 <p className="mb-0">
 <span>July 01, 2019</span>
@@ -108,13 +108,13 @@ const Section3 = () => {
 <span>by pastor:</span>
 <h3>Jerry Simon</h3>
 <p className>
-<a href="https://vimeo.com/45830194" className="btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
-<a href="#" className="btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
+<a href="https://vimeo.com/45830194" className=" textdecoration-none btn-custom mb-2 p-2 text-center popup-vimeo"><span className="icon-play"></span> Watch</a>
+<a href="#" className="textdecoration-none btn-custom p-2 text-center"><span className="icon-download"></span> Download</a>
 </p>
 </div>
 </div>
 <div className="text pt-3 text-center">
-<h2 className="mb-0"><a href="sermon.html">Developing Spiritual Mentality</a></h2>
+<h2 className="mb-0"><a className='textdecoration-none'>Developing Spiritual Mentality</a></h2>
 <div className="meta">
 <p className="mb-0">
 <span>July 01, 2019</span>

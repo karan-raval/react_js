@@ -15,11 +15,11 @@ const Section4 = () => {
 <div className="row">
 <div className="col-md-6 col-lg-3">
 <div className="cause-entry ftco-animate">
-<a href="#" className="img" style="background-image: url(images/cause-1.jpg);"></a>
+<a href="#" className="img s4img1" ></a>
 <div className="text p-3">
 <h3><a href="cause.html">Health care, Food</a></h3>
 <div className="progress mb-4">
-<div className="progress-bar color-1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+<div className="progress-bar color-1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{width:75}}>
 <span>40%</span>
 </div>
 </div>
@@ -31,11 +31,11 @@ const Section4 = () => {
 </div>
 <div className="col-md-6 col-lg-3">
 <div className="cause-entry ftco-animate">
-<a href="#" className="img" style="background-image: url(images/cause-2.jpg);"></a>
+<a  className="img s4img2" ></a>
 <div className="text p-3">
 <h3><a href="cause.html">Restored the Old City Church</a></h3>
 <div className="progress mb-4">
-<div className="progress-bar color-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+<div className="progress-bar color-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style={{width:50}}>
 <span>50%</span>
 </div>
 </div>
@@ -47,11 +47,11 @@ const Section4 = () => {
 </div>
 <div className="col-md-6 col-lg-3">
 <div className="cause-entry ftco-animate">
-<a href="#" className="img" style="background-image: url(images/cause-3.jpg);"></a>
+<a href="#" className="img s4img3" ></a>
 <div className="text p-3">
 <h3><a href="cause.html">Save Childern For Hunger</a></h3>
 <div className="progress mb-4">
-<div className="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+<div className="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width:80}}>
 <span>80%</span>
 </div>
 </div>
@@ -63,11 +63,11 @@ const Section4 = () => {
 </div>
 <div className="col-md-6 col-lg-3">
 <div className="cause-entry ftco-animate">
-<a href="#" className="img" style="background-image: url(images/cause-4.jpg);"></a>
+<a href="#" className="img s4img4" ></a>
 <div className="text p-3">
 <h3><a href="cause.html">Save Childern For Hunger</a></h3>
 <div className="progress mb-4">
-<div className="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+<div className="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width:80}}>
 <span>80%</span>
 </div>
 </div>
@@ -89,7 +89,7 @@ const Section4 = () => {
 </div>
 </div>
 </section>
-<section className="ftco-daily-verse img" style="background-image: url(images/bg_4.jpg);">
+<section className="ftco-daily-verse img s4img5" >
 <div className="overlay"></div>
 <div className="container">
 <div className="row justify-content-center">
@@ -122,7 +122,7 @@ const Section4 = () => {
 <div className="row d-flex">
 <div className="col-md-4 d-flex ftco-animate">
 <div className="blog-entry justify-content-end">
-<a href="single.html" className="block-20" style="background-image: url('images/image_1.jpg');">
+<a href="single.html" className="block-20 s4img6" >
 </a>
 <div className="text float-right d-block">
 <div className="d-flex align-items-center pt-2 mb-4 topp">
@@ -148,7 +148,7 @@ const Section4 = () => {
 </div>
 <div className="col-md-4 d-flex ftco-animate">
 <div className="blog-entry justify-content-end">
-<a href="single.html" className="block-20" style="background-image: url('images/image_2.jpg');">
+<a href="single.html" className="block-20 s4img7" >
 </a>
 <div className="text float-right d-block">
 <div className="d-flex align-items-center pt-2 mb-4 topp">
@@ -174,7 +174,7 @@ const Section4 = () => {
 </div>
 <div className="col-md-4 d-flex ftco-animate">
 <div className="blog-entry">
-<a href="single.html" className="block-20" style="background-image: url('images/image_3.jpg');">
+<a href="single.html" className="block-20 s4img8" >
 </a>
 <div className="text float-right d-block">
 <div className="d-flex align-items-center pt-2 mb-4 topp">
@@ -214,7 +214,7 @@ const Section4 = () => {
 <div className="col-md-6 col-lg-3 ftco-animate">
 <div className="staff">
 <div className="img-wrap d-flex align-items-stretch">
-<div className="img align-self-stretch" style="background-image: url(images/staff-1.jpg);"></div>
+<div className="img align-self-stretch s4img9" ></div>
 </div>
 <div className="text d-flex align-items-center pt-3 text-center">
 <div>
@@ -235,7 +235,7 @@ const Section4 = () => {
 <div className="col-md-6 col-lg-3 ftco-animate">
 <div className="staff">
 <div className="img-wrap d-flex align-items-stretch">
-<div className="img align-self-stretch" style="background-image: url(images/staff-2.jpg);"></div>
+<div className="img align-self-stretch s4img10"></div>
 </div>
 <div className="text d-flex align-items-center pt-3 text-center">
 <div>
@@ -256,7 +256,7 @@ const Section4 = () => {
 <div className="col-md-6 col-lg-3 ftco-animate">
 <div className="staff">
 <div className="img-wrap d-flex align-items-stretch">
-<div className="img align-self-stretch" style="background-image: url(images/staff-3.jpg);"></div>
+<div className="img align-self-stretch s4img11"></div>
 </div>
 <div className="text d-flex align-items-center pt-3 text-center">
 <div>
@@ -277,7 +277,7 @@ const Section4 = () => {
 <div className="col-md-6 col-lg-3 ftco-animate">
 <div className="staff">
 <div className="img-wrap d-flex align-items-stretch">
-<div className="img align-self-stretch" style="background-image: url(images/staff-4.jpg);"></div>
+<div className="img align-self-stretch s4img12" ></div>
 </div>
 <div className="text d-flex align-items-center pt-3 text-center">
 <div>
@@ -378,9 +378,6 @@ const Section4 = () => {
 </div>
 </div>
 </section>
-<section className="ftco-section ftco-no-pt ftco-no-pb">
-<div id="map" className="bg-white"></div>
-</section>
 <section className="ftco-gallery ftco-section ftco-no-pb mb-4">
 <div className="container-fluid px-4">
 <div className="row justify-content-center mb-5 pb-3">
@@ -391,28 +388,28 @@ const Section4 = () => {
 </div>
 <div className="row">
 <div className="col-md-3 ftco-animate">
-<a href="images/gallery-1.jpg" className="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg);">
+<a  className="gallery image-popup img d-flex align-items-center  s4img13" >
 <div className="icon mb-4 d-flex align-items-center justify-content-center">
 <span className="icon-instagram"></span>
 </div>
 </a>
 </div>
 <div className="col-md-3 ftco-animate">
-<a href="images/gallery-2.jpg" className="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-2.jpg);">
+<a href="images/gallery-2.jpg" className="gallery image-popup img d-flex align-items-center s4img14" >
 <div className="icon mb-4 d-flex align-items-center justify-content-center">
 <span className="icon-instagram"></span>
 </div>
 </a>
 </div>
 <div className="col-md-3 ftco-animate">
-<a href="images/gallery-3.jpg" className="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg);">
+<a href="images/gallery-3.jpg" className="gallery image-popup img d-flex align-items-center s4img15" >
 <div className="icon mb-4 d-flex align-items-center justify-content-center">
 <span className="icon-instagram"></span>
 </div>
 </a>
 </div>
 <div className="col-md-3 ftco-animate">
-<a href="images/gallery-4.jpg" className="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg);">
+<a href="images/gallery-4.jpg" className="gallery image-popup img d-flex align-items-center s4img16" >
 <div className="icon mb-4 d-flex align-items-center justify-content-center">
 <span className="icon-instagram"></span>
 </div>
