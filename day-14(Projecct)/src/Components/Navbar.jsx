@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
 <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
 <div className="container">
-<a className="navbar-brand" ><span className="flaticon-bible"></span>Christian</a>
+<a className="navbar-brand text-light">Christian</a>
 <button className="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 <span className="oi oi-menu"></span> Menu
 </button>
@@ -33,8 +33,23 @@ const Navbar = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <div class="slider-item js-fullheight" >
+        <div class="overlay"></div>
+        <div class="container">
+<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+<div class="col-md-8 text-center ftco-animate mt-5">
+<div class="text">
+<div class="subheading">
+<span>Christian Church</span>
+</div>
+<h1 class="mb-4">Following <span>Jesus</span> wherever we are</h1>
+<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<p><a href="#" class="btn btn-primary py-2 px-4">Be part of us</a> <a href="#" class="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
