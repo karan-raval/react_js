@@ -3205,6 +3205,7 @@ h5,
 .ftco-about-section .img {
   height: 600px;
   background: #ffd615;
+  background-image: url('https://preview.colorlib.com/theme/christian/images/about.jpg.webp');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3233,10 +3234,7 @@ textarea.form-control {
   height: inherit !important;
 }
 
-.ftco-animate {
-  opacity: 0;
-  visibility: hidden;
-}
+
 
 .ftco-section {
   padding: 7em 0;
@@ -4850,4 +4848,185 @@ img.mfp-img {
   z-index: 1;
   height: 100%;
   width: 100%;
+}
+
+.img2{
+background-image: url('https://preview.colorlib.com/theme/christian/images/sermon-1.jpg.webp')
+}
+
+.img3{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/sermon-2.jpg.webp')
+}
+.img4{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/sermon-3.jpg.webp')
+}
+.img5{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/sermon-4.jpg.webp')
+}
+.img6{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/sermon-5.jpg.webp')
+}
+.img7{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/sermon-6.jpg.webp')
+}
+.img8{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/bg_3.jpg.webp')
+}
+.img9{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/event-1.jpg.webp')
+}
+.img10{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/event-2.jpg.webp')
+}
+.img11{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/event-3.jpg.webp')
+}
+
+.img12{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/event-4.jpg.webp')
+}
+.img13{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/event-6.jpg.webp')
+}
+.img14{
+  background-image: url('https://preview.colorlib.com/theme/christian/images/event-5.jpg.webp')
+}
+
+
+
+
+
+
+/*  */
+
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?6tt51o');
+  src:  url('../fonts/icomoon/icomoon.eot?6tt51o#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?6tt51o') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?6tt51o') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?6tt51o#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  /* speak: none; */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-search:before {
+  content: "\f002";
+}
+.icon-heart:before {
+  content: "\f004";
+}
+.icon-user:before {
+  content: "\f007";
+}
+.icon-home:before {
+  content: "\f015";
+}
+.icon-download:before {
+  content: "\f019";
+}
+.icon-play:before {
+  content: "\f04b";
+}
+.icon-calendar:before {
+  content: "\f073";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-globe:before {
+  content: "\f0ac";
+}
+.icon-users:before {
+  content: "\f0c0";
+}
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+.icon-money:before {
+  content: "\f0d6";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-paper-plane:before {
+  content: "\f1d8";
+}
+.icon-map-signs:before {
+  content: "\f277";
+}
+.icon-phone2:before {
+  content: "\e0cd";
+}
+.icon-chat:before {
+  content: "\e0b7";
+}
+.icon-person:before {
+  content: "\e7fd";
+}
+
+
+/*  */
+
+
+/*!
+  Ionicons, v4.0.0-19
+  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
+  https://twitter.com/benjsperry  https://twitter.com/ionicframework
+  MIT License: https://github.com/driftyco/ionicons
+
+  Android-style icons originally built by Google’s
+  Material Design Icons: https://github.com/google/material-design-icons
+  used under CC BY http://creativecommons.org/licenses/by/4.0/
+  Modified icons to fit ionicon’s grid from original.
+*/
+
+
+.ionicons,.ion-ios-arrow-forward:before,.ion-ios-arrow-round-forward:before,.ion-ios-checkmark-circle:before,.ion-md-arrow-back:before {
+  display: inline-block;
+  font-family: "Ionicons";
+  /* speak: none; */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.ion-ios-arrow-forward:before {
+  content: "\f3d1"
+}
+
+.ion-ios-arrow-round-forward:before {
+  content: "\f119"
+}
+
+.ion-ios-checkmark-circle:before {
+  content: "\f14a"
+}
+
+.ion-md-arrow-back:before {
+  content: "\f27d"
 }

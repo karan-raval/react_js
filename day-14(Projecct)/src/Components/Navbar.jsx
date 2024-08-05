@@ -33,23 +33,23 @@ const Navbar = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-        <div class="slider-item js-fullheight" >
-        <div class="overlay"></div>
-        <div class="container">
-<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
-<div class="col-md-8 text-center ftco-animate mt-5">
-<div class="text">
-<div class="subheading">
+        {/* <div class="slider-item js-fullheight" > */}
+        {/* <div class="overlay"></div> */}
+        {/* <div class="container"> */}
+{/* <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true"> */}
+{/* <div class="col-md-8 text-center ftco-animate mt-5"> */}
+<div className="text">
+<div className="subheading">
 <span>Christian Church</span>
 </div>
-<h1 class="mb-4">Following <span>Jesus</span> wherever we are</h1>
+<h1 className="mb-4">Following <span>Jesus</span> wherever we are</h1>
 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-<p><a href="#" class="btn btn-primary py-2 px-4">Be part of us</a> <a href="#" class="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
+<p><a href="#" className="btn btn-primary py-2 px-4">Be part of us</a> <a href="#" className="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
 </div>
-</div>
-</div>
-</div>
-</div>
+{/* </div> */}
+{/* </div> */}
+{/* </div> */}
+{/* </div> */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -59,8 +59,14 @@ const Navbar = () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div className="text">
+<div className="subheading">
+<span>Christian Church</span>
+</div>
+<h1 className="mb-4">We <span>Love</span> God, We Believe in God</h1>
+<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<p><a href="#" className="btn btn-primary py-2 px-4">Be part of us</a> <a href="#" className="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
+</div>
         </Carousel.Caption>
       </Carousel.Item>
      
