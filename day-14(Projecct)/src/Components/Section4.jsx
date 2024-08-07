@@ -1,4 +1,8 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import CountUp from 'react-countup';
+
 
 const Section4 = () => {
   return (
@@ -18,11 +22,9 @@ const Section4 = () => {
 <a href="#" className="img s4img1" ></a>
 <div className="text p-3">
 <h3><a href="cause.html">Health care, Food</a></h3>
-<div className="progress mb-4">
-<div className="progress-bar color-1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{width:75}}>
-<span>40%</span>
-</div>
-</div>
+<div className=" mb-4"> 
+<ProgressBar label={`40%`} variant="warning" now={40} />
+</div> 
 <p className="donate"><span className="price">$80,000</span> <span className="target-goal">Target</span> / <span className="price">$55,000</span> <span className="target-goal">Goal</span></p>
 <p>A small river named Duden flows by their place and supplies it with the necessary.</p>
 <p><a href="#" className="btn btn-primary">Donate Now!</a></p>
@@ -34,11 +36,9 @@ const Section4 = () => {
 <a  className="img s4img2" ></a>
 <div className="text p-3">
 <h3><a href="cause.html">Restored the Old City Church</a></h3>
-<div className="progress mb-4">
-<div className="progress-bar color-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style={{width:50}}>
-<span>50%</span>
-</div>
-</div>
+<div className=" mb-4"> 
+<ProgressBar label={`50%`} variant="warning" now={50} />
+</div> 
 <p className="donate"><span className="price">$80,000</span> <span className="target-goal">Target</span> / <span className="price">$55,000</span> <span className="target-goal">Goal</span></p>
 <p>A small river named Duden flows by their place and supplies it with the necessary.</p>
 <p><a href="#" className="btn btn-primary">Donate Now!</a></p>
@@ -50,11 +50,9 @@ const Section4 = () => {
 <a href="#" className="img s4img3" ></a>
 <div className="text p-3">
 <h3><a href="cause.html">Save Childern For Hunger</a></h3>
-<div className="progress mb-4">
-<div className="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width:80}}>
-<span>80%</span>
-</div>
-</div>
+<div className=" mb-4"> 
+<ProgressBar label={`80%`} variant="warning" now={80} />
+</div> 
 <p className="donate"><span className="price">$80,000</span> <span className="target-goal">Target</span> / <span className="price">$55,000</span> <span className="target-goal">Goal</span></p>
 <p>A small river named Duden flows by their place and supplies it with the necessary.</p>
 <p><a href="#" className="btn btn-primary">Donate Now!</a></p>
@@ -66,11 +64,9 @@ const Section4 = () => {
 <a href="#" className="img s4img4" ></a>
 <div className="text p-3">
 <h3><a href="cause.html">Save Childern For Hunger</a></h3>
-<div className="progress mb-4">
-<div className="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width:80}}>
-<span>80%</span>
-</div>
-</div>
+<div className=" mb-4"> 
+<ProgressBar label={`80%`} variant="warning" now={80} />
+</div> 
 <p className="donate"><span className="price">$80,000</span> <span className="target-goal">Target</span> / <span className="price">$55,000</span> <span className="target-goal">Goal</span></p>
 <p>A small river named Duden flows by their place and supplies it with the necessary.</p>
 <p><a href="#" className="btn btn-primary">Donate Now!</a></p>
@@ -81,8 +77,8 @@ const Section4 = () => {
 <div className="row mt-4 justify-content-end">
 <div className="col-lg-10">
 <div className="donated-intro bg-darken p-4 p-md-5">
-<h2>Donation so far <span>$</span><strong className="number" data-number="9891000">0</strong></h2>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+<h2>Donation so far <span>$</span><strong className="number"><CountUp end={9891000} duration={5} className="number">0</CountUp></strong></h2>
+<p style={{color:'#999999'}}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
 <p><a href="#" className="btn btn-black px-4 py-3">Donate now!</a></p>
 </div>
 </div>
@@ -211,16 +207,17 @@ const Section4 = () => {
 </div>
 </div>
 <div className="row">
-<div className="col-md-6 col-lg-3 ftco-animate">
+<Card className='col-md-6 col-lg-3 ftco-animate'>
 <div className="staff">
 <div className="img-wrap d-flex align-items-stretch">
-<div className="img align-self-stretch s4img9" ></div>
-</div>
-<div className="text d-flex align-items-center pt-3 text-center">
-<div>
-<h3 className="mb-2">Lloyd Wilson</h3>
-<span className="position mb-4">Lead Pastor</span>
-<div className="faded">
+      <Card.Img variant="top" width={100} src="https://preview.colorlib.com/theme/christian/images/staff-1.jpg.webp" className='img align-self-stretch' />
+      </div>
+      <div className="text d-flex align-items-center pt-3 text-center">
+      <Card.Body>
+        <Card.Title>Lloyd Wilson</Card.Title>
+        <span className="position mb-4">Lead Pastor</span>
+        <Card.Text>
+        <div className="faded">
 <ul className="ftco-social text-center">
 <li className="ftco-animate"><a href="#"><span className="icon-twitter"></span></a></li>
 <li className="ftco-animate"><a href="#"><span className="icon-facebook"></span></a></li>
@@ -228,20 +225,22 @@ const Section4 = () => {
 <li className="ftco-animate"><a href="#"><span className="icon-instagram"></span></a></li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div className="col-md-6 col-lg-3 ftco-animate">
+        </Card.Text>
+      </Card.Body>
+      </div>
+      </div>
+    </Card>
+    <Card className='col-md-6 col-lg-3 ftco-animate'>
 <div className="staff">
 <div className="img-wrap d-flex align-items-stretch">
-<div className="img align-self-stretch s4img10"></div>
-</div>
-<div className="text d-flex align-items-center pt-3 text-center">
-<div>
-<h3 className="mb-2">Rachel Parker</h3>
-<span className="position mb-4">Lead Pastor</span>
-<div className="faded">
+      <Card.Img variant="top" width={100} src="https://preview.colorlib.com/theme/christian/images/staff-3.jpg.webp" className='img align-self-stretch' />
+      </div>
+      <div className="text d-flex align-items-center pt-3 text-center">
+      <Card.Body>
+        <Card.Title>Rachel Parker</Card.Title>
+        <span className="position mb-4">Lead Pastor</span>
+        <Card.Text>
+        <div className="faded">
 <ul className="ftco-social text-center">
 <li className="ftco-animate"><a href="#"><span className="icon-twitter"></span></a></li>
 <li className="ftco-animate"><a href="#"><span className="icon-facebook"></span></a></li>
@@ -249,20 +248,22 @@ const Section4 = () => {
 <li className="ftco-animate"><a href="#"><span className="icon-instagram"></span></a></li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div className="col-md-6 col-lg-3 ftco-animate">
+        </Card.Text>
+      </Card.Body>
+      </div>
+      </div>
+    </Card>
+    <Card className='col-md-6 col-lg-3 ftco-animate'>
 <div className="staff">
 <div className="img-wrap d-flex align-items-stretch">
-<div className="img align-self-stretch s4img11"></div>
-</div>
-<div className="text d-flex align-items-center pt-3 text-center">
-<div>
-<h3 className="mb-2">Ian Smith</h3>
-<span className="position mb-4">Lead Pastor</span>
-<div className="faded">
+      <Card.Img variant="top" width={100} src="https://preview.colorlib.com/theme/christian/images/staff-4.jpg.webp" className='img align-self-stretch' />
+      </div>
+      <div className="text d-flex align-items-center pt-3 text-center">
+      <Card.Body>
+        <Card.Title>Ian Smith</Card.Title>
+        <span className="position mb-4">Lead Pastor</span>
+        <Card.Text>
+        <div className="faded">
 <ul className="ftco-social text-center">
 <li className="ftco-animate"><a href="#"><span className="icon-twitter"></span></a></li>
 <li className="ftco-animate"><a href="#"><span className="icon-facebook"></span></a></li>
@@ -270,20 +271,22 @@ const Section4 = () => {
 <li className="ftco-animate"><a href="#"><span className="icon-instagram"></span></a></li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div className="col-md-6 col-lg-3 ftco-animate">
+        </Card.Text>
+      </Card.Body>
+      </div>
+      </div>
+    </Card>
+    <Card className='col-md-6 col-lg-3 ftco-animate'>
 <div className="staff">
 <div className="img-wrap d-flex align-items-stretch">
-<div className="img align-self-stretch s4img12" ></div>
-</div>
-<div className="text d-flex align-items-center pt-3 text-center">
-<div>
-<h3 className="mb-2">Alicia Henderson</h3>
-<span className="position mb-4">Lead Pastor</span>
-<div className="faded">
+      <Card.Img variant="top" width={100} src="https://preview.colorlib.com/theme/christian/images/staff-2.jpg.webp" className='img align-self-stretch' />
+      </div>
+      <div className="text d-flex align-items-center pt-3 text-center">
+      <Card.Body>
+        <Card.Title>Alicia Henderson</Card.Title>
+        <span className="position mb-4">Lead Pastor</span>
+        <Card.Text>
+        <div className="faded">
 <ul className="ftco-social text-center">
 <li className="ftco-animate"><a href="#"><span className="icon-twitter"></span></a></li>
 <li className="ftco-animate"><a href="#"><span className="icon-facebook"></span></a></li>
@@ -291,10 +294,15 @@ const Section4 = () => {
 <li className="ftco-animate"><a href="#"><span className="icon-instagram"></span></a></li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-</div>
+        </Card.Text>
+      </Card.Body>
+      </div>
+      </div>
+    </Card>
+
+
+
+
 </div>
 </div>
 </section>
@@ -358,7 +366,7 @@ const Section4 = () => {
 </div>
 <div>
 <h3 className="mb-3">Email Address</h3>
-<p><a href="/cdn-cgi/l/email-protection#3e575058517e47514b4c4d574a5b105d5153"><span className="__cf_email__" data-cfemail="b8d1d6ded7f8c1d7cdcacbd1ccdd96dbd7d5">[email&#160;protected]</span></a></p>
+<p><a href="/cdn-cgi/l/email-protection#3e575058517e47514b4c4d574a5b105d5153"><span className="__cf_email__" data-cfemail="b8d1d6ded7f8c1d7cdcacbd1ccdd96dbd7d5">admin@123gmail.com</span></a></p>
 </div>
 </div>
 </div>

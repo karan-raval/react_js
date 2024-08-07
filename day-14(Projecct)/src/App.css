@@ -285,9 +285,7 @@ legend {
   white-space: normal;
 }
 
-progress {
-  vertical-align: baseline;
-}
+
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
@@ -1261,61 +1259,9 @@ fieldset:disabled a.btn {
   border-radius: 0.25rem;
 }
 
-@-webkit-keyframes progress-bar-stripes {
-  from {
-    background-position: 1rem 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
 
-@keyframes progress-bar-stripes {
-  from {
-    background-position: 1rem 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
 
-.progress {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 1rem;
-  overflow: hidden;
-  font-size: 0.75rem;
-  background-color: #e9ecef;
-  border-radius: 0.25rem;
-}
 
-.progress-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #007bff;
-  -webkit-transition: width 0.6s ease;
-  -o-transition: width 0.6s ease;
-  transition: width 0.6s ease;
-}
-@media screen and (prefers-reduced-motion: reduce) {
-  .progress-bar {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-}
 
 .media {
   display: -webkit-box;
@@ -3058,48 +3004,9 @@ h5,
   font-size: 12px;
 }
 
-.progress {
-  height: 4px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background: #f0f0f0;
-  overflow: visible;
-}
 
-.progress-bar {
-  background: #ffd615;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-size: 12px;
-  line-height: 1.2;
-  color: #000000;
-  font-weight: 600;
-  position: relative;
-  overflow: visible;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
-}
-.progress-bar:after {
-  position: absolute;
-  top: -7px;
-  right: 0;
-  content: "";
-  opacity: 1;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 4px 8px 4px;
-  border-color: transparent transparent #ffd615 transparent;
-}
-.progress-bar span {
-  position: absolute;
-  top: -22px;
-  right: -5px;
-  font-size: 12px;
-  font-weight: 400;
-}
+
+
 
 .ftco-daily-verse {
   position: relative;
@@ -4530,9 +4437,7 @@ img.mfp-img {
 .s4img8 {
   background-image: url("https://preview.colorlib.com/theme/christian/images/image_3.jpg.webp");
 }
-.s4img9 {
-  background-image: url("https://preview.colorlib.com/theme/christian/images/staff-1.jpg.webp");
-}
+
 .s4img10 {
   background-image: url("https://preview.colorlib.com/theme/christian/images/staff-2.jpg.webp");
 }
