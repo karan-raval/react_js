@@ -1,30 +1,31 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-const Navbar = () => {
+const Navbarb = () => {
   return (
     <>
-<nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
-<div className="container">
-<a className="navbar-brand text-light">Christian</a>
-<button className="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-<span className="oi oi-menu"></span> Menu
-</button>
-<div className="collapse navbar-collapse" id="ftco-nav">
-<ul className="navbar-nav nav ml-auto">
-<li className="nav-item"><a href="#home-section" className="nav-link"><span>Home</span></a></li>
-<li className="nav-item"><a href="#about-section" className="nav-link"><span>About</span></a></li>
-<li className="nav-item"><a href="#sermons-section" className="nav-link"><span>Sermons</span></a></li>
-<li className="nav-item"><a href="#events-section" className="nav-link"><span>Events</span></a></li>
-<li className="nav-item"><a href="#causes-section" className="nav-link"><span>Causes</span></a></li>
-<li className="nav-item"><a href="#blog-section" className="nav-link"><span>Blog</span></a></li>
-<li className="nav-item"><a href="#pastor-section" className="nav-link"><span>Pastor</span></a></li>
-<li className="nav-item"><a href="#contact-section" className="nav-link"><span>Contact</span></a></li>
-</ul>
-</div>
-</div>
-</nav>
+<Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-dark" >
+      <Container  className="container">
+        <Navbar.Brand href="#home" className="text-light">Christian</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link href="#home" ><li className="nav-item"><a href="#home-section" className="nav-link"><span>Home</span></a></li></Nav.Link>
+            <Nav.Link href="#link"><li className="nav-item"><a href="#about-section" className="nav-link"><span>About</span></a></li></Nav.Link>
+            <Nav.Link href="#link"><li className="nav-item"><a href="#sermons-section" className="nav-link"><span>Sermons</span></a></li></Nav.Link>
+            <Nav.Link href="#link"><li className="nav-item"><a href="#events-section" className="nav-link"><span>Events</span></a></li></Nav.Link>
+            <Nav.Link href="#link"><li className="nav-item"><a href="#causes-section" className="nav-link"><span>Causes</span></a></li></Nav.Link>
+            <Nav.Link href="#link"><li className="nav-item"><a href="#blog-section" className="nav-link"><span>Blog</span></a></li></Nav.Link>
+            <Nav.Link href="#link"><li className="nav-item"><a href="#pastor-section" className="nav-link"><span>Pastor</span></a></li></Nav.Link>
+            <Nav.Link href="#link"><li className="nav-item"><a href="#contact-section" className="nav-link"><span>Contact</span></a></li></Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+{/*  */}
 <Carousel fade>
       <Carousel.Item>
         <img
@@ -75,4 +76,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbarb;

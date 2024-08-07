@@ -1,7 +1,8 @@
+// import { Nav } from 'react-bootstrap'
 import './App.css'
 import Counter from './Components/Counter'
 import Footer from './Components/Footer'
-import Navbar from './Components/Navbar'
+import Navbarb from './Components/Navbar'
 import Section1 from './Components/Section1'
 import Section2 from './Components/Section2'
 import Section3 from './Components/Section3'
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <>
-     <Navbar/>
+     <Navbarb/>
      <Section1/>
      <Counter/>
      <Section2/>

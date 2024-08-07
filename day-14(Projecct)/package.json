@@ -13,12 +13,15 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
+    "@flaticon/flaticon-uicons": "^3.3.1",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.3.21",
     "icomoon": "^1.0.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
+    "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
+    "react-icomoon": "^2.5.7",
     "react-owl-carousel": "^2.3.3"
   },
   "devDependencies": {

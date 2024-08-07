@@ -1,4 +1,5 @@
 import React from 'react'
+import CountUp from 'react-countup';
 
 const Counter = () => {
   return (
@@ -12,7 +13,7 @@ const Counter = () => {
 <div className="icon d-flex justify-content-center align-items-center">
 <span className="icon-users"></span>
 </div>
-<strong className="number" data-number="98087">0</strong>
+<strong ><CountUp end={98087} duration={5} className="number">0</CountUp></strong>
 <span>Members</span>
 </div>
 </div>
@@ -23,7 +24,7 @@ const Counter = () => {
 <div className="icon d-flex justify-content-center align-items-center">
 <span className="icon-user"></span>
 </div>
-<strong className="number" data-number="309">0</strong>
+<strong className="number"><CountUp end={309} duration={5} >0</CountUp></strong>
 <span>Pastors</span>
 </div>
 </div>
@@ -34,7 +35,7 @@ const Counter = () => {
 <div className="icon d-flex justify-content-center align-items-center">
 <span className="icon-money"></span>
 </div>
-<strong className="number" data-number="9350500">0</strong>
+<strong className="number" ><CountUp end={9350500} duration={5} >0</CountUp></strong>
 <span>Donation</span>
 </div>
 </div>
@@ -45,7 +46,7 @@ const Counter = () => {
 <div className="icon d-flex justify-content-center align-items-center">
 <span className="icon-home"></span>
 </div>
-<strong className="number" data-number="206">0</strong>
+<strong className="number" data-end=""><CountUp end={206} duration={5} >0</CountUp></strong>
 <span>Churches</span>
 </div>
 </div>
