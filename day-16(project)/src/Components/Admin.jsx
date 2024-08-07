@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 const Admin = () => {
+  const [dis,setDis] = useState(false)
+  const [id,setId] = useState("")
   const [state, setState] = useState({
     id:uuidv4(),
     title: "",
@@ -39,6 +41,10 @@ const Admin = () => {
     localStorage.setItem("data", JSON.stringify(arr));
   }, [arr]);
 
+  useEffect(()=>{
+    console.log(id);
+    
+  }, [id])
 
   const handleDelete = (ID)=>{
     let a = [];  
@@ -48,8 +54,42 @@ const Admin = () => {
      }
     }
     setArr(a)
-  
    }
+
+   const handleEdit = (ed)=>{
+    setDis(true)
+  
+    setId(ed)
+    arr.forEach((el)=>{
+      if(el.id == ed){
+        setState(el)
+      }
+    })
+      }
+      
+      const handleupDate=(e)=>{
+        let d = arr.map((el)=>{
+          if(el.id == id){
+             return {...el,...state}
+          }else{
+            return el;
+          }
+        })
+  setState(d)
+ 
+      setDis(false)
+            setState({
+         id:uuidv4(),
+           title: "",
+           bname: "",
+           price: "",
+           dprice: "",
+           oprice: "",
+           des: "",
+           image: "",
+       })
+}
+
   let { title, dprice, oprice, bname, des, image } = state;
   return (
     <>
@@ -120,7 +160,8 @@ const Admin = () => {
                 />
               </div>
               <div className="input_field">
-                <input type="submit" className="btn" />
+              {dis==false?<input type="submit" value="Submit"  className="btn" />
+                :<input type="submit" value="Update" onClick={()=>handleupDate}  className="btn" />}
               </div>
             </form>
           </div>
@@ -147,14 +188,14 @@ const Admin = () => {
               return (
                 <tr>
                   <td>Product ID:-{el.id}</td>
+                  <td> <img src={el.image} alt={el.title} /></td>
                   <td>{el.title}</td>
                   <td>{el.bname}</td>
-                  <td> <img src={el.image} alt={el.title} /></td>
                   <td>{el.dprice}</td>
                   <td>{el.oprice}</td>
                   <td>{el.des}</td>
-                  <td><button onClick={()=>handleDelete(el.id)}>Delete</button></td>
-                  <td><button onClick={()=>handlEdit(el.title)}>edit</button></td>
+                  <td><button className="btns" onClick={()=>handleDelete(el.id)}>Delete</button></td>
+                  <td><button className="btns" onClick={()=>handleEdit(el.id)}>edit</button></td>
                 </tr>
               );
             })}

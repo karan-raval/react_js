@@ -80,11 +80,18 @@
   padding: 12px;
   border-radius: 25px;
   border: none;
-}
-
-.wrapper .form .btn {
   color: #fff;
 }
+.btns{
+  width: 100%;
+  /* margin: 10% 0% 0% 30%; */
+  background: #3aaf9f;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+}
+
 
 .wrapper .form .input_field i{
   position: absolute;
