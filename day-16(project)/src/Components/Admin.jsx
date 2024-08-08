@@ -41,10 +41,7 @@ const Admin = () => {
     localStorage.setItem("data", JSON.stringify(arr));
   }, [arr]);
 
-  useEffect(()=>{
-    console.log(id);
-    
-  }, [id])
+
 
   const handleDelete = (ID)=>{
     let a = [];  

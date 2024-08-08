@@ -34,11 +34,7 @@ const Navbarb = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-        {/* <div class="slider-item js-fullheight" > */}
-        {/* <div class="overlay"></div> */}
-        {/* <div class="container"> */}
-{/* <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true"> */}
-{/* <div class="col-md-8 text-center ftco-animate mt-5"> */}
+        
 <div className="text">
 <div className="subheading">
 <span>Christian Church</span>
@@ -47,10 +43,7 @@ const Navbarb = () => {
 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 <p><a href="#" className="btn btn-primary py-2 px-4">Be part of us</a> <a href="#" className="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
 </div>
-{/* </div> */}
-{/* </div> */}
-{/* </div> */}
-{/* </div> */}
+
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
