@@ -4,13 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 const Admin = () => {
-  const [dis,setDis] = useState(false)
-  const [id,setId] = useState("")
+  const [dis,setDis] = useState(null)
+  // const [id,setId] = useState("")
   const [state, setState] = useState({
     id:uuidv4(),
     title: "",
     bname: "",
-    price: "",
     dprice: "",
     oprice: "",
     des: "",
@@ -25,23 +24,33 @@ const Admin = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setArr([...arr, state]);
+   if(dis==null){
+    setArr([...arr,state]);
+   }else{
+    let d = arr.map((el)=>{
+      if(el.id == dis){
+        return {...el,...state}
+      }else{
+        return el
+      }
+     })
+     setArr(d)
+     setDis(null)
+  }
     setState({
       id:uuidv4(),
       title: "",
       bname: "",
-      price: "",
       dprice: "",
       oprice: "",
       des: "",
       image: "",
     });
   };
+
   useEffect(() => {
     localStorage.setItem("data", JSON.stringify(arr));
   }, [arr]);
-
-
 
   const handleDelete = (ID)=>{
     let a = [];  
@@ -54,38 +63,13 @@ const Admin = () => {
    }
 
    const handleEdit = (ed)=>{
-    setDis(true)
-  
-    setId(ed)
-    arr.forEach((el)=>{
-      if(el.id == ed){
-        setState(el)
+    setDis(ed)
+    arr.forEach(ele=>{
+      if(ele.id == ed){
+        setState(ele)
       }
     })
       }
-      
-      const handleupDate=(e)=>{
-        let d = arr.map((el)=>{
-          if(el.id == id){
-             return {...el,...state}
-          }else{
-            return el;
-          }
-        })
-  setState(d)
- 
-      setDis(false)
-            setState({
-         id:uuidv4(),
-           title: "",
-           bname: "",
-           price: "",
-           dprice: "",
-           oprice: "",
-           des: "",
-           image: "",
-       })
-}
 
   let { title, dprice, oprice, bname, des, image } = state;
   return (
@@ -157,8 +141,8 @@ const Admin = () => {
                 />
               </div>
               <div className="input_field">
-              {dis==false?<input type="submit" value="Submit"  className="btn" />
-                :<input type="submit" value="Update" onClick={()=>handleupDate}  className="btn" />}
+              <input type="submit" value={dis != null ? "Update" : "Submit"}  className="btn" />
+                
               </div>
             </form>
           </div>
